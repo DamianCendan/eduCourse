@@ -1,6 +1,7 @@
 <?php
   include 'database.php';
 ?>
+<?php session_start(); ?>
 <!--Here we are going to do all our queries -->
 <?php
   //Set question number_format
@@ -8,19 +9,34 @@
   Store the super global $_GET['n'] that is in 
   the URL in $number
   */
-  $number = (int) $_GET['n'];
+  $number = (int) $_GET['n'];  
   
   //Here we are going to put the queries
+  
   /*
   This is to get the question form the database
   to insert it into this web page
   */
   $query = "SELECT * FROM `questions` 
               WHERE question_number = $number";
-  //Get result
+              
+  //Here we get the result from the query or die if there is not connection
   $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
-  
+  //Here we storage the text from the database into $question
   $question = $result->fetch_assoc();
+  
+  
+  /*We want to get the total of questions*/
+    /*
+    * Get total of questions
+    */
+    $query = "SELECT * FROM `questions`";
+    //Get results
+    $results = $mysqli->query($query) or die($mysqli->error.__LINE__);
+    $total = $results->num_rows;
+    $next = $total+1;
+  
+  
   
   /*
   This is to get the choices form the database
@@ -82,10 +98,10 @@
 </header>
 <main>
   <div class="container">
-   <div class="current">Question 1 of 5</div>
+   <div class="current">Question <?php echo $question['question_number']; ?> of <?php echo $total; ?></div>
    <p class="question">
     <!--Here is where we insert the data from the database-->
-    <?php echo $question['text'];?> 
+    <?php echo $question['text']; ?> 
    </p>
    <form method="post" action="process.php">
     <ul class="choices">
@@ -97,6 +113,9 @@
       <?php endwhile; ?>
     </ul>
     <input type="submit" value="Submit" />
+    <!--We have to add a hidden input to pass the 
+    question number to the process.php-->
+    <input type="hidden" name="number" value="<?php echo $number; ?>"/>
    </form>
   </div>
 </main>
