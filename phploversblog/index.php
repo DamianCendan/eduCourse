@@ -4,17 +4,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    -->
     <meta name="generator" content="Jekyll v4.1.1">
     <title>Wellcome To PHPLoversBlog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
 
     <!-- Bootstrap core CSS -->
+<!--
 <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+-->
     <!-- Favicons -->
+<!--
 <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -23,7 +27,7 @@
 <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
 <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
-
+-->
 
     <style>
       .bd-placeholder-img {
@@ -84,6 +88,7 @@
     </nav>
   </div>
 
+  <!--
   <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
       <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
@@ -91,7 +96,9 @@
       <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
     </div>
   </div>
+  -->
 
+  <!--
   <div class="row mb-2">
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -122,6 +129,7 @@
       </div>
     </div>
   </div>
+  -->
 </div>
 
 <main role="main" class="container">
